@@ -483,6 +483,8 @@ size_t BleKeyboard::release(const MediaKeyReport k)
 
 size_t BleKeyboard::releaseRawKeyCode(uint8_t k)
 {
+	uint8_t i;
+	
 	// Test the key report to see if k is present.  Clear it if it exists.
 	// Check all positions in case the key is present more than once (which it shouldn't be)
 	for (i=0; i<6; i++) {
