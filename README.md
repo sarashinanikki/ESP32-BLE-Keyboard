@@ -1,6 +1,6 @@
 # ESP32 BLE Keyboard library
 
-このrepoはhttps://github.com/T-vK/ESP32-BLE-Keyboardをforkしたものです。
+このrepoは[こちら](https://github.com/T-vK/ESP32-BLE-Keyboard)をforkしたものです。
 
 This library allows you to make the ESP32 act as a Bluetooth Keyboard and control what it does.  
 You might also be interested in:
