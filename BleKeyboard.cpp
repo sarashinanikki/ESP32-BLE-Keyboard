@@ -435,6 +435,14 @@ size_t BleKeyboard::pressRawKeyCode(uint8_t k)
 	return 1;
 }
 
+size_t BleKeyboard::pressMetaKeyCode(uint8_t k)
+{
+	_keyReport.modifiers |= k;
+
+	sendReport(&_keyReport);
+	return 1;
+}
+
 // release() takes the specified key out of the persistent key report and
 // sends the report.  This tells the OS the key is no longer pressed and that
 // it shouldn't be repeated any more.
@@ -492,6 +500,14 @@ size_t BleKeyboard::releaseRawKeyCode(uint8_t k)
 			_keyReport.keys[i] = 0x00;
 		}
 	}
+
+	sendReport(&_keyReport);
+	return 1;
+}
+
+size_t BleKeyboard::releaseMetaKeyCode(uint8_t k)
+{
+	_keyReport.modifiers &= ~k;
 
 	sendReport(&_keyReport);
 	return 1;

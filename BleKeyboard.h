@@ -158,9 +158,11 @@ public:
   size_t press(uint8_t k);
   size_t press(const MediaKeyReport k);
   size_t pressRawKeyCode(uint8_t k);
+  size_t pressMetaKeyCode(uint8_t k);
   size_t release(uint8_t k);
   size_t release(const MediaKeyReport k);
   size_t releaseRawKeyCode(uint8_t k);
+  size_t releaseMetaKeyCode(uint8_t k);
   size_t write(uint8_t c);
   size_t write(const MediaKeyReport c);
   size_t write(const uint8_t *buffer, size_t size);
